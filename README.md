@@ -1,4 +1,4 @@
-# install frame-motion, 
+# install frame-motion, react-feather
 
 # Getting Started with Create React App
 
