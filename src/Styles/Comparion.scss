@@ -1,0 +1,116 @@
+.comparison-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(138, 75, 255, 0.2);
+    overflow: hidden;
+    
+    .comparison-header {
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(138, 75, 255, 0.1);
+      
+      .comparison-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      
+      .comparison-description {
+        color: #d8c5ff;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .comparison-content {
+      padding: 1.5rem;
+      
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        .category {
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 1rem;
+          border-radius: 0.5rem;
+          
+          .category-name {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .category-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            
+            .reality, .alternative {
+              .comparison-label {
+                font-size: 0.85rem;
+                color: #a89ec9;
+                margin-bottom: 0.25rem;
+              }
+              
+              .comparison-value {
+                font-weight: 500;
+              }
+            }
+          }
+          
+          .satisfaction-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            
+            .reality-satisfaction, .alternative-satisfaction {
+              .satisfaction-label {
+                font-size: 0.75rem;
+                color: #a89ec9;
+                margin-bottom: 0.25rem;
+              }
+              
+              .progress-bar {
+                height: 0.5rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 0.25rem;
+                overflow: hidden;
+                
+                .progress-indicator {
+                  height: 100%;
+                  
+                  &.real {
+                    background-color: #4c9fff;
+                  }
+                  
+                  &.alternative {
+                    background-color: #9c6cff;
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        .summary {
+          margin-top: 2rem;
+          padding: 1rem;
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 0.5rem;
+          border: 1px solid rgba(138, 75, 255, 0.2);
+          
+          .summary-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .summary-text {
+            color: #d8c5ff;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+  

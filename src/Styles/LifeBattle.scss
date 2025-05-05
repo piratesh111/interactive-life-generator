@@ -1,0 +1,222 @@
+.battles-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(138, 75, 255, 0.2);
+    overflow: hidden;
+    
+    .battles-header {
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(138, 75, 255, 0.1);
+      
+      .battles-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      
+      .battles-description {
+        color: #d8c5ff;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .battles-content {
+      padding: 1.5rem;
+      
+      .battle-profiles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          
+          .profile-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            
+            &.real {
+              background-color: #4c9fff;
+              border: 2px solid #4c9fff;
+            }
+            
+            &.alternative {
+              background-color: #9c6cff;
+              border: 2px solid #9c6cff;
+            }
+          }
+        }
+        
+        .versus {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+      }
+      
+      .battles-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        .battle-item {
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 1rem;
+          border-radius: 0.5rem;
+          
+          .battle-category {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            
+            svg {
+              color: #ffc107;
+            }
+          }
+          
+          .battle-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            
+            .battle-option {
+              padding: 0.75rem;
+              border-radius: 0.5rem;
+              background-color: rgba(0, 0, 0, 0.3);
+              
+              &.real.selected {
+                background-color: rgba(76, 159, 255, 0.2);
+                border: 1px solid #4c9fff;
+              }
+              
+              &.alternative.selected {
+                background-color: rgba(156, 108, 255, 0.2);
+                border: 1px solid #9c6cff;
+              }
+              
+              .option-text {
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+              }
+              
+              .option-actions {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .votes {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.25rem;
+                  
+                  svg {
+                    color: #a89ec9;
+                  }
+                }
+                
+                .vote-button {
+                  padding: 0.25rem 0.75rem;
+                  border-radius: 0.25rem;
+                  font-size: 0.85rem;
+                  background-color: transparent;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  color: #fff;
+                  transition: all 0.3s ease;
+                  
+                  &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                  }
+                  
+                  &.voted {
+                    background-color: rgba(255, 255, 255, 0.1);
+                  }
+                }
+              }
+            }
+          }
+          
+          .vote-progress {
+            height: 0.5rem;
+            background-color: #1a1a2e;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            position: relative;
+            
+            .real-progress, .alternative-progress {
+              position: absolute;
+              top: 0;
+              height: 100%;
+            }
+            
+            .real-progress {
+              left: 0;
+              background-color: #4c9fff;
+            }
+            
+            .alternative-progress {
+              right: 0;
+              background-color: #9c6cff;
+            }
+          }
+          
+          .vote-percentages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+            color: #a89ec9;
+          }
+        }
+        
+        .battle-stats {
+          margin-top: 2rem;
+          padding: 1rem;
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 0.5rem;
+          border: 1px solid rgba(138, 75, 255, 0.2);
+          
+          .stats-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            
+            svg {
+              color: #9c6cff;
+            }
+          }
+          
+          .stats-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            
+            svg {
+              color: #a89ec9;
+            }
+          }
+          
+          .stats-summary {
+            color: #d8c5ff;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+  

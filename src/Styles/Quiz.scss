@@ -1,0 +1,112 @@
+.quiz-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(138, 75, 255, 0.2);
+    overflow: hidden;
+    
+    .quiz-header {
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(138, 75, 255, 0.1);
+      
+      .quiz-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      
+      .quiz-description {
+        color: #d8c5ff;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .quiz-content {
+      padding: 1.5rem;
+      
+      .question-container {
+        .question {
+          font-size: 1.25rem;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+        
+        .options {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          
+          .option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.3);
+            }
+            
+            input {
+              margin-right: 0.75rem;
+            }
+            
+            label {
+              flex: 1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    
+    .quiz-footer {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(138, 75, 255, 0.1);
+      
+      .back-button {
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0.25rem;
+        color: #fff;
+        transition: all 0.3s ease;
+        
+        &:hover:not(:disabled) {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+      
+      .progress-dots {
+        display: flex;
+        gap: 0.25rem;
+        
+        .progress-dot {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background-color: #3d2a7d;
+          
+          &.current {
+            background-color: #9c6cff;
+          }
+          
+          &.completed {
+            background-color: #6a4cad;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,61 @@
+.generator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      
+      .tab {
+        flex: 1;
+        padding: 0.75rem;
+        background: transparent;
+        border: none;
+        color: #a89ec9;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        
+        &:hover:not(:disabled) {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        &.active {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          position: relative;
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(to right, #9c6cff, #4cc3ff);
+            border-radius: 3px 3px 0 0;
+          }
+        }
+        
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .tab {
+          padding: 0.5rem 0.25rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    
+    .tab-content {
+      min-height: 400px;
+    }
+  }
+  
